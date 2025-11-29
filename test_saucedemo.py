@@ -41,15 +41,14 @@ def test_add_to_cart(driver):
 
 def test_checkout(driver):
     login(driver, "locked_out_user", "secret_sauce")
-    driver.find_element(By.CSS_SELECTOR, '[data-test="add-to-cart-sauce-labs-backpack"]').click()
+    driver.find_element(By.CSS_SELECTOR, '[data-test="add-to-cart-sauce-labs-Bike-Light"]').click()
     driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
     driver.find_element(By.CSS_SELECTOR, '[data-test="checkout"]').click()
-    driver.find_element(By.CSS_SELECTOR, '[data-test="firstName"]').send_keys("Test")
-    driver.find_element(By.CSS_SELECTOR, '[data-test="lastName"]').send_keys("User")
+    driver.find_element(By.CSS_SELECTOR, '[data-test="firstName"]').send_keys("Jan")
+    driver.find_element(By.CSS_SELECTOR, '[data-test="lastName"]').send_keys("Niscak")
     driver.find_element(By.CSS_SELECTOR, '[data-test="postalCode"]').send_keys("12345")
     driver.find_element(By.CSS_SELECTOR, '[data-test="continue"]').click()
     driver.find_element(By.CSS_SELECTOR, '[data-test="finish"]').click()
     complete = driver.find_element(By.CLASS_NAME, "complete-header")
-    assert "Thank you" in complete.text
-
+    assert "Thank you for your order!" in complete.text
 
