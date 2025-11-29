@@ -9,9 +9,7 @@ Testy sú napísané v **Python** s použitím:
 - Pytest 
 - WebDriver Manager 
 
----
-
-## 🚀 Testované funkcie
+## Testované funkcie
 
 ### 1. Valid Login 
 Zabezpečuje, aby sa používateľ so správnymi prihlasovacími údajmi mohol úspešne prihlásiť.
@@ -25,4 +23,3 @@ Overuje možnosť pridať produkt do košíka a aktualizuje počítadlo košíka
 ### 4. Complete Checkout Flow   
 Pokrýva celý proces platby od výberu produktu až po potvrdenie objednávky.
 
----
