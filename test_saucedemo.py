@@ -33,15 +33,15 @@ def test_invalid_login(driver):
 
 
 def test_add_to_cart(driver):
-    login(driver, "problem_user", "secret_sauce")
+    login(driver, "standard_user", "secret_sauce")
     driver.find_element(By.CSS_SELECTOR, '[data-test="add-to-cart-sauce-labs-backpack"]').click()
     badge = driver.find_element(By.CLASS_NAME, "shopping_cart_badge")
     assert badge.text == "1"
 
 
 def test_checkout(driver):
-    login(driver, "locked_out_user", "secret_sauce")
-    driver.find_element(By.CSS_SELECTOR, '[data-test="add-to-cart-sauce-labs-Bike-Light"]').click()
+    login(driver, "visual_user", "secret_sauce")
+    driver.find_element(By.CSS_SELECTOR, '[data-test="add-to-cart-sauce-labs-backpack"]').click()
     driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
     driver.find_element(By.CSS_SELECTOR, '[data-test="checkout"]').click()
     driver.find_element(By.CSS_SELECTOR, '[data-test="firstName"]').send_keys("Jan")
@@ -51,4 +51,3 @@ def test_checkout(driver):
     driver.find_element(By.CSS_SELECTOR, '[data-test="finish"]').click()
     complete = driver.find_element(By.CLASS_NAME, "complete-header")
     assert "Thank you for your order!" in complete.text
-
