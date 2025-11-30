@@ -7,7 +7,12 @@ Testy sú napísané v **Python** s použitím:
 
 - Selenium WebDriver 
 - Pytest 
-- WebDriver Manager 
+- WebDriver Manager
+
+## Installation 
+pip install -r requirements.txt
+## Run test
+pytest -q
 
 ## Testované funkcie
 
