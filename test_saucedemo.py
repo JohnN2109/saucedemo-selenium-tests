@@ -46,7 +46,7 @@ def test_add_to_cart(driver):
 # používateľ nemôže pokračovať v nákupe ani dokončiť objednávku.
 
 def test_checkout(driver):
-    login(driver, "visual_user", "secret_sauce")
+    login(driver, "standard_user", "secret_sauce")
     driver.find_element(By.CSS_SELECTOR, '[data-test="add-to-cart-sauce-labs-backpack"]').click()
     driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
     driver.find_element(By.CSS_SELECTOR, '[data-test="checkout"]').click()
@@ -61,3 +61,4 @@ def test_checkout(driver):
 # cez košík až po potvrdenie objednávky.
 # Ide o najdôležitejší obchodný proces aplikácie – ak checkout nefunguje,
 # zákazník nedokáže vykonať nákup.
+
